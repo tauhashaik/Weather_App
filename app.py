@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import requests
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='Static', static_url_path='/static')
 API_KEY = '76099b11651d41689adcd3c7bb570481'
 
 def get_weather_data(city, country=None):
